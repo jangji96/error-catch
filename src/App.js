@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ErrorBoundaray from './ErrorBoundary';
+import User from './User'
 
 function App() {
+  const user = {
+    id: 1,
+    username: 'velopert'
+  }; 
+  // return <User user={user} />
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ErrorBoundaray>
+      <User />
+    </ErrorBoundaray>
   );
 }
 
